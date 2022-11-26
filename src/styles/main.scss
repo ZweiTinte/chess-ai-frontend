@@ -1,0 +1,94 @@
+@import "variables";
+@import "animations";
+@import "mixins";
+@import "forms";
+@import "chessBoard";
+
+body {
+  background-color: $bgColor;
+  color: $fontColor;
+  font-family: "Ubuntu";
+  margin: 0;
+}
+
+.headlineOne {
+  @include flexCenter;
+  background-color: $bgColorHeadlineOne;
+}
+
+.headlineTwo {
+  @include flexCenter;
+}
+
+h1 {
+  text-align: center;
+  background-color: $bgColorHeadlineOne;
+}
+
+h2 {
+  text-align: center;
+  width: max-content;
+  padding-bottom: 0.15rem;
+  border-bottom: 0.2rem solid $contentBoxBorder;
+}
+
+.contentBox {
+  padding: 0.5rem;
+  box-sizing: border-box;
+  border-radius: 0.25rem;
+  border: 0.25rem solid $contentBoxBorder;
+  margin: 0.5rem;
+  width: 120%;
+}
+
+.content {
+  display: flex;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.labelInput {
+  @include flexSpace;
+}
+
+.labelValue {
+  @include flexSpace;
+  border-bottom: 0.15rem dotted $contentBoxBorder;
+}
+
+.bodyText {
+  font-weight: 400;
+  font-style: normal;
+  line-height: normal;
+  font-size: 1rem;
+  padding: 0.25rem;
+}
+
+.submit {
+  display: flex;
+  align-items: center;
+}
+
+button {
+  border-radius: 0.25rem;
+  justify-content: left;
+  outline: none;
+  width: auto;
+  text-align: center;
+  font-weight: 400;
+  font-style: normal;
+  line-height: normal;
+  display: inline-flex;
+  cursor: pointer;
+  padding: 0.5rem;
+  font-size: 1rem;
+  color: $fontColor;
+  background-color: $itemColor;
+  border: 0.15rem solid $bgColorHeadlineOne;
+  margin: 0.25rem;
+
+  &:hover {
+    background-color: $bgColorHeadlineOne;
+    border-color: $itemColor;
+  }
+}

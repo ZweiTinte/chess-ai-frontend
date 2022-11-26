@@ -1,0 +1,35 @@
+@mixin flexCenter {
+  display: flex;
+  justify-content: center;
+}
+
+@mixin flexSpace {
+  display: flex;
+  justify-content: space-between;
+}
+
+@mixin chessBoardTopBottom {
+  display: grid;
+  align-items: stretch;
+  background-color: $bgColorHeadlineOne;
+  grid-column-start: 1;
+  grid-column-end: 9;
+}
+
+@mixin chessBoardLeftRight {
+  display: grid;
+  align-items: stretch;
+  background-color: $bgColorHeadlineOne;
+  grid-row-start: 1;
+  grid-row-end: 9;
+}
+
+@mixin loader {
+  border: 0.25rem solid $bgColorHeadlineOne;
+  border-top: 0.25rem solid $bgColor;
+  border-radius: 50%;
+  width: 0.75rem;
+  height: 0.75rem;
+  margin-left: 1rem;
+  animation: spin 1s linear infinite;
+}
